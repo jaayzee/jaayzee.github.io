@@ -85,6 +85,10 @@
   transition: 200ms;
 }
 
+* {
+  cursor: none;
+}
+
 /* BODY */
   body {
     margin: 0;
@@ -125,6 +129,42 @@
     line-height: 1.1;
   }
 
+/* CURSOR */
+/* add x crosshair for clickables, and a | shape for text eventually
+ https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/
+ https://stackoverflow.com/questions/57366843/css-change-each-cursor
+ https://codepen.io/Nharox/pen/aZgEQm
+ https://www.youtube.com/watch?v=rfpRZ2t_BrQ&t=606s&ab_channel=DesignCourse
+ */
+.cursor {
+  width: 20px;
+  height: 20px;
+  z-index: 999;
+  pointer-events: none;;
+  border-radius: 50%;
+  background: var(--text);
+  position: absolute;
+}
+@keyframes cursorAnim {
+  from {
+    transform: translateY(0px);
+  } to {
+    transform: translateY(5px);
+  }
+}
+.expand {
+  animation: cursorAnimClick 200ms forwards;
+}
+@keyframes cursorAnimClick {
+  0% {
+    transform: scale(1);
+  } 50% {
+    transform: scale(2);
+  } 100% {
+    transform: scale(1);
+  }
+}
+
 /* NAVBAR */
   .navbar {
     position: fixed;
@@ -143,9 +183,6 @@
   .nav-item {
     width: 100%;
   }
-  .nav-item:last-child {
-    margin-top: auto;
-  }
   .nav-link {
     display: flex;
     align-items: center;
@@ -153,12 +190,6 @@
     color: var(--text);
     text-decoration: none;
     transition: 500ms ;
-  }
-  .nav-link:hover {
-    border-radius: 50px;
-    margin: 20px 20px 20px 20px;
-    outline: 10px inset var(--bg-nav-shadow);
-    transition: 500ms ease-in-out;
   }
   .logo-link {
     display: flex;
@@ -174,6 +205,7 @@
   }
   .link-text {
     color: var(--bg);
+    font-weight: bold;
     display: none;
     margin-left: 1rem;
     transition: 500ms ease-in-out;
@@ -216,7 +248,7 @@
       height: 5rem;
     }
     .nav-link:hover {
-      background: var(--bg);
+      background: var(--bg-nav-shadow);
       transition: 500ms;
     }
     .logo {
@@ -256,6 +288,15 @@
     .navbar:hover .logo-text
     {
       left: 0px;
+    }
+    .nav-link:hover {
+      box-sizing: border-box;
+      padding-left: 20px;
+      transition: 500ms ease-in-out;
+    }
+    .nav-item:nth-last-child(2) {
+      margin-top: auto;
+      padding: 5em;
     }
   }
   .fa-primary {
