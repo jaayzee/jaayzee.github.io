@@ -1,3 +1,4 @@
+import Nav from './Nav.jsx'
 import Me from './pages/MePage/Me.jsx'
 import Art from './pages/ArtPage/Art.jsx'
 import Car from './pages/CarPage/Car.jsx'
@@ -12,6 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={ <Me /> } />
         <Route path="/art" element={ <Art /> } />

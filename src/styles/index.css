@@ -21,6 +21,11 @@
   --purple-shadow: #61638C; 
 
 }
+
+* {
+  cursor: none;
+}
+ 
 /* DARK MODE */
   .light {
     --bg: var(--gray0);
@@ -38,57 +43,53 @@
   }
 
 /* DARK MODE TOGGLE */
-.switch {
-  font-size: 17px;
-  position: fixed;
-  display: inline-block;
-  width: 2em;
-  height: 3.5em;
-  transition: 200ms;
-  left: 1.3em;
-  bottom: 1.3em;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--bg);
-  transition: 500ms ease-in-out;
-  border-radius: 30px;
-  cursor: none;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
-  border-radius: 20px;
-  left: 0.3em;
-  top: 0.3em;
-  background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
-  transition: 300ms;
-}
-#darkMode.clicked + .slider {
-  background-color:var(--bg);
-}
-#darkMode.clicked + .slider:before {
-  transform: translateY(1.5em);
-  background: transparent;
-  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -5px 0 0 #a3dafb;
-  transition: 200ms;
-}
-
-* {
-  cursor: none;
-}
+  .switch {
+    font-size: 17px;
+    position: fixed;
+    display: inline-block;
+    width: 2em;
+    height: 3.5em;
+    transition: 200ms;
+    left: 1.3em;
+    bottom: 1.3em;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg);
+    transition: 500ms ease-in-out;
+    border-radius: 30px;
+    cursor: none;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    top: 0.3em;
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    transition: 300ms;
+  }
+  #darkMode.clicked + .slider {
+    background-color:var(--bg);
+  }
+  #darkMode.clicked + .slider:before {
+    transform: translateY(1.5em);
+    background: transparent;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -5px 0 0 #a3dafb;
+    transition: 200ms;
+  }
 
 /* BODY */
   body {
@@ -131,46 +132,46 @@
   }
 
 /* CURSOR */
-/* add x crosshair for clickables, and a | shape for text eventually
- https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/
- https://stackoverflow.com/questions/57366843/css-change-each-cursor
- https://codepen.io/Nharox/pen/aZgEQm
- https://www.youtube.com/watch?v=rfpRZ2t_BrQ&t=606s&ab_channel=DesignCourse
- */
-.cursor {
-  width: 20px;
-  height: 20px;
-  z-index: 999;
-  pointer-events: none;;
-  border-radius: 50%;
-  background: var(--text);
-  position: absolute;
-}
-@keyframes cursorAnim {
-  from {
-    transform: translateY(0px);
-  } to {
-    transform: translateY(5px);
+  /* add x crosshair for clickables, and a | shape for text eventually
+  https://www.javascripttutorial.net/javascript-dom/javascript-mouse-events/
+  https://stackoverflow.com/questions/57366843/css-change-each-cursor
+  https://codepen.io/Nharox/pen/aZgEQm
+  https://www.youtube.com/watch?v=rfpRZ2t_BrQ&t=606s&ab_channel=DesignCourse
+  */
+  .cursor {
+    width: 20px;
+    height: 20px;
+    z-index: 999;
+    pointer-events: none;;
+    border-radius: 50%;
+    background: var(--text);
+    position: absolute;
   }
-}
-.expand {
-  animation: cursorAnimClick 200ms forwards;
-}
-@keyframes cursorAnimClick {
-  0% {
-    transform: scale(1);
-  } 50% {
-    transform: scale(2);
-  } 100% {
-    transform: scale(1);
+  @keyframes cursorAnim {
+    from {
+      transform: translateY(0px);
+    } to {
+      transform: translateY(5px);
+    }
   }
-}
+  .expand {
+    animation: cursorAnimClick 200ms forwards;
+  }
+  @keyframes cursorAnimClick {
+    0% {
+      transform: scale(1);
+    } 50% {
+      transform: scale(2);
+    } 100% {
+      transform: scale(1);
+    }
+  }
 
 /* NAVBAR */
   .navbar {
     position: fixed;
     background: var(--bg-nav);
-    transition: width 200ms ease;
+    transition: width 200ms ease-in-out;
   }
   .navbar-nav {
     list-style: none;
@@ -179,10 +180,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%
+    height: 100%;
   }
-  .nav-item {
+  /* BUTTON RIPPLE */
+/* https://css-tricks.com/how-to-recreate-the-ripple-effect-of-material-design-buttons/ */
+  .nav-item { /* with ripple effect */
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: background 400ms;
+  }
+  span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 1s linear;
+    background-color: var(--bg);
+  }
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
   }
   .nav-link {
     display: flex;
@@ -297,7 +316,7 @@
     }
     .nav-item:nth-last-child(2) {
       margin-top: auto;
-      padding: 5em;
+      margin-bottom: 5em;
     }
   }
   .fa-primary {
