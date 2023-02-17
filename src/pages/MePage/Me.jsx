@@ -1,9 +1,8 @@
-import Nav from '../../Nav'
+
 
 function Me() {
-    return (
-        <Nav />
-    ) 
+    // return (
+    // ) 
 }
 
 export default Me

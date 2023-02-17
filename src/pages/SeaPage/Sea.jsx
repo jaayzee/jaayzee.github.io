@@ -1,9 +1,8 @@
-import Nav from '../../Nav'
+
 
 function Sea() {
-    return (
-        <Nav />
-    ) 
+    // return (
+    // ) 
 }
 
 export default Sea

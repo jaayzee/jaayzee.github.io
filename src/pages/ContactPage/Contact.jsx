@@ -1,9 +1,8 @@
-import Nav from '../../Nav'
+
 
 function Contact() {
-    return (
-        <Nav />
-    ) 
+    // return (
+    // ) 
 }
 
 export default Contact

@@ -1,9 +1,8 @@
-import Nav from '../../Nav'
+
 
 function Art() {
-    return (
-        <Nav />
-    ) 
+    // return (
+    // ) 
 }
 
 export default Art

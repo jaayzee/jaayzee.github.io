@@ -3,6 +3,36 @@ import { Link } from 'react-router-dom'
 import './styles/index.css'
 import DarkMode from "./DarkMode"
 
+// ripple button function
+function createRipple(event) {
+    const button = event.currentTarget;
+  
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+  
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+    circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+    circle.classList.add("ripple");
+  
+    const ripple = button.getElementsByClassName("ripple")[0];
+  
+    if (ripple) {
+      ripple.remove();
+    }
+  
+    button.appendChild(circle);
+  }
+
+// stall to establish "nav-item" and then place ripple event
+window.onload = function forButton() {
+  const buttons = document.getElementsByClassName("nav-item");
+  for (const button of buttons) {
+    button.addEventListener("click", createRipple);
+  }
+}
+  
 function Nav() {
     return (
         <>
@@ -22,7 +52,7 @@ function Nav() {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/" className="nav-link">
+                    <Link to="/" className="nav-link btn">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         viewBox="0 0 448 512">

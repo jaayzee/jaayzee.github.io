@@ -1,9 +1,8 @@
-import Nav from '../../Nav'
+
 
 function Space() {
-    return (
-        <Nav />
-    ) 
+    // return (
+    // ) 
 }
 
 export default Space

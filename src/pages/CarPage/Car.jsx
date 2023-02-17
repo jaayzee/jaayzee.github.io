@@ -1,9 +1,8 @@
-import Nav from '../../Nav'
+
 
 function Car() {
-    return (
-        <Nav />
-    ) 
+    // return (
+    // ) 
 }
 
 export default Car
