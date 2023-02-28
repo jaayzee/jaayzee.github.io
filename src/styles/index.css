@@ -118,9 +118,6 @@
     color: currentColor;
     text-decoration: none;
   }
-  a:hover {
-    color: var(--text);
-  }
   ul {
     list-style-type: none;
     margin: 0;

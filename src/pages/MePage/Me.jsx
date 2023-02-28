@@ -4,7 +4,7 @@ function Me() {
     return (
         <main>
             <div className="title-small"> Hi, I'm </div>
-                <div className="title-big me-link-big"> JOHN ZHOU</div>
+                <a className="title-big me-link-big" href="https://www.linkedin.com/in/jjzee" target="_blank"> JOHN ZHOU</a>
                 <body> 
                     A homebody bodying in California. <br></br>
                     <br></br>
