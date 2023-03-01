@@ -28,7 +28,7 @@ const DarkMode = () => {
       localStorage.setItem("theme", "dark");
       theme = 'dark';
     }
-  };
+  }
 
   return (
     <label className="switch">
@@ -40,7 +40,7 @@ const DarkMode = () => {
       <span className="slider"></span>
     </label>
 
-  );
-};
+  )
+}
 
 export default DarkMode;
