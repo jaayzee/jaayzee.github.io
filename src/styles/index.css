@@ -136,10 +136,10 @@
   https://www.youtube.com/watch?v=rfpRZ2t_BrQ&t=606s&ab_channel=DesignCourse
   */
   .cursor {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     z-index: 999;
-    pointer-events: none;;
+    pointer-events: none;
     border-radius: 50%;
     background: var(--text);
     position: absolute;
@@ -330,7 +330,7 @@
     }
     .nav-item:nth-last-child(2) {
       margin-top: auto;
-      margin-bottom: 5em;
+      margin-bottom: 6em;
     }
   }
   .fa-primary {

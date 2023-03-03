@@ -2,9 +2,13 @@
     margin-left: 5rem;
     padding: 1rem;
 }
+.header {
+    width: 100%;
+    height: 100vh;
+    padding: 0 10%;
+}
 .top-block {
     position: absolute;
-    margin-top: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
