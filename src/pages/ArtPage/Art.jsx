@@ -1,8 +1,11 @@
 
 
 function Art() {
-    // return (
-    // ) 
+    return (
+        <>
+
+        </>
+    ) 
 }
 
 export default Art
