@@ -7,7 +7,7 @@ function Me() {
     return (
         <div className="gap">
             <Intro />
-            <About />
+            {/* <About /> */}
         </div>
     ) 
 }
