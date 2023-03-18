@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={ <Me /> } />
+        <Route path="/me" element={ <Me /> } />
         <Route path="/art" element={ <Art /> } />
         <Route path="/car" element={ <Car /> } />
         <Route path="/sea" element={ <Sea /> } />
