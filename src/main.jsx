@@ -10,12 +10,12 @@ import Policy from './pages/privacypolicy.jsx'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Have to switch to HashRouter, BrowserRouter isn't supported by github pages */}
-    <HashRouter>
+    {/* NOTE: Browser Router by itself isn't supported by github, so use HashRouter(ew urls) or use basename: */}
+    <BrowserRouter basename='/'>
       <Nav />
       <Routes>
         <Route path="/" element={ <Me /> } />
@@ -28,6 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Routes>
       {/* eventually do footer */}
       {/* <Footer /> */}
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
 )
