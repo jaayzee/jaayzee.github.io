@@ -1,9 +1,10 @@
 {
   "name": "site",
+  "homepage": "https://jaayzee.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jaayzee.github.io/",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
