@@ -43,7 +43,7 @@
     display: inline-block;
     position: relative;
     color: var(--bg-nav);
-    font-size: 5em;
+    font-size: 10vh;
     font-weight: bold;
     white-space: nowrap;
 }
