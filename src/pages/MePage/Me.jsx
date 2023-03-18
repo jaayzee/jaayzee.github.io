@@ -5,7 +5,7 @@ import About from './components/2.About.jsx'
 
 function Me() {
     return (
-        <div className="space">
+        <div className="gap">
             <Intro />
             <About />
         </div>
