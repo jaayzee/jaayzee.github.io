@@ -275,6 +275,9 @@
   }
   /* SMALL SCREENS */
   @media only screen and (max-width: 600px) {
+    .cursor {
+      cursor:none;
+    }
     .navbar {
       bottom: 0;
       width: 100vw;
