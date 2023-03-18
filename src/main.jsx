@@ -5,6 +5,7 @@ import Car from './pages/CarPage/Car.jsx'
 import Sea from './pages/SeaPage/Sea.jsx'
 import Space from './pages/SpacePage/Space.jsx'
 import Contact from './pages/ContactPage/Contact.jsx'
+import Policy from './pages/privacypolicy.jsx'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/sea" element={ <Sea /> } />
         <Route path="/space" element={ <Space /> } />
         <Route path="/contact" element={ <Contact /> } />
+        <Route path="/policy" element={ <Policy /> } />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
