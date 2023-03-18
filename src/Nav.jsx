@@ -39,7 +39,7 @@ function Nav() {
         <nav className="navbar">
             <ul className="navbar-nav">
                 <li className="logo">
-                    <Link to="/WOOOOOOOOO/" className="logo-link">
+                    <Link to="/" className="logo-link">
                         <span className="link-text logo-text">john zhou</span>
                         <svg
                         xmlns="http://www.w3.org/2000/svg" 
@@ -52,7 +52,7 @@ function Nav() {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/WOOOOOOOOO/" className="nav-link btn">
+                    <Link to="/" className="nav-link btn">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         viewBox="0 0 448 512">
