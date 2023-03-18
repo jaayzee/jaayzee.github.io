@@ -28,7 +28,7 @@
     width: 100%;
     transform: scaleX(0);
     height: 0.25em;
-    bottom: -1px;
+    bottom: -0.1em;
     left: 0;
     background-color: var(--bg-nav);
     transform-origin: bottom right;

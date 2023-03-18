@@ -9,11 +9,12 @@ import Policy from './pages/privacypolicy.jsx'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* Have to switch to HashRouter, BrowserRouter isn't supported by github pages */}
+    <HashRouter>
       <Nav />
       <Routes>
         <Route path="/" element={ <Me /> } />
@@ -24,6 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/contact" element={ <Contact /> } />
         <Route path="/policy" element={ <Policy /> } />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )
