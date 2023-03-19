@@ -15,7 +15,7 @@
 .me-link {
     display: inline-block;
     position: relative;
-    line-height: 2rem;
+    line-height: 3rem;
     color: var(--bg-nav);
 }
 .me-link:hover {
@@ -27,7 +27,7 @@
     width: 100%;
     transform: scaleX(0);
     height: 0.25em;
-    bottom: -0.2em;
+    bottom: 0;
     left: 0;
     background-color: var(--bg-nav);
     transform-origin: bottom right;

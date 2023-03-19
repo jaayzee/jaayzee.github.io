@@ -1,20 +1,20 @@
 {
   "name": "site",
-  "homepage": "https://jaayzee.github.io/",
+  "homepage": "https://jaayzee.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
     "@react-three/drei": "^9.57.3",
     "@react-three/fiber": "^8.12.0",
+    "env-cmd": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
