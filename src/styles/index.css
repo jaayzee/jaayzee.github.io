@@ -21,10 +21,6 @@
   --purple-shadow: #61638C; 
 
 }
-
-* {
-  cursor: none;
-}
  
 /* DARK MODE */
   .light {
@@ -240,8 +236,8 @@
   }
   /* SMALL SCREENS */
   @media only screen and (max-width: 600px) {
-    .cursor {
-      cursor: auto;
+    * {
+      cursor: default;
     }
     .navbar {
       bottom: 0;
@@ -270,6 +266,9 @@
   }
   /* LARGE SCREENS */
   @media only screen and (min-width: 600px) {
+    * {
+      cursor: none;
+    }
     .navbar {
       top: 0;
       width: 5rem;
