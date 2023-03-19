@@ -1,17 +1,70 @@
-.gap {
+@media only screen and (min-width: 600px) {
+    .gap {
     padding-left: 6rem;
+    }
+    .header {
+    height: 100vh;
+    padding: 0 10%;
+    }
+    .top-block {
+        position: relative;
+        font-size: 2vh;
+    }
+    .me-link-big {
+    position: relative;
+    color: var(--bg-nav);
+    font-size: 10vh;
+    font-weight: bold;
+    white-space: nowrap;
+}
 }
 .header {
     height: 100vh;
-    padding: 0 10%;
-}
+    }
+
 .top-block {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 2vh;
+    font-size: 2vh 2vw;
 }
+
+@media only screen and (max-width: 600px) {
+    .top-block {
+        position: relative;
+        font-size: 3vw;
+        padding: 1em;
+    }
+    .me-link-big {
+        display: inline-block;
+        position: relative;
+        color: var(--bg-nav);
+        font-size: 16vw;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+.morning{
+    background: linear-gradient(40deg, #f8ceaf, #cbbffd 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.afternoon{
+    background: linear-gradient(40deg, #fca344,  #55acfa 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.evening{
+    background: linear-gradient(40deg,  #fbb676, #d86a91 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 .me-link {
     display: inline-block;
     position: relative;
@@ -27,7 +80,7 @@
     width: 100%;
     transform: scaleX(0);
     height: 0.25em;
-    bottom: 0;
+    bottom: -0.25rem;
     left: 0;
     background-color: var(--bg-nav);
     transform-origin: bottom right;
@@ -38,14 +91,7 @@
     transform-origin: bottom left;
 }
 
-.me-link-big {
-    display: inline-block;
-    position: relative;
-    color: var(--bg-nav);
-    font-size: 10vh;
-    font-weight: bold;
-    white-space: nowrap;
-}
+
 .me-link-big:before {
     content: "JOHN ZHOU";
     white-space: nowrap;
