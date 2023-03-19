@@ -14,7 +14,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* NOTE: Browser Router by itself isn't supported by github, so use HashRouter(ew urls) or use basename: */}
+    {/* NOTE: Browser Router by itself isn't supported by github, so another options HashRouter(ew urls)}
     {/* Github pages don't natively support single page apps */}
     <BrowserRouter>
       <Nav />
