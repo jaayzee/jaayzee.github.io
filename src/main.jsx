@@ -5,7 +5,8 @@ import Car from './pages/CarPage/Car.jsx'
 import Sea from './pages/SeaPage/Sea.jsx'
 import Space from './pages/SpacePage/Space.jsx'
 import Contact from './pages/ContactPage/Contact.jsx'
-import Policy from './pages/privacypolicy.jsx'
+import Policy from './pages/PrivacyPolicy.jsx'
+import Error from './pages/ErrorPage.jsx'
 // import Footer from 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/space" element={ <Space /> } />
         <Route path="/contact" element={ <Contact /> } />
         <Route path="/policy" element={ <Policy /> } />
+        <Route path="*" element={<Error />} />
       </Routes>
       {/* eventually do footer */}
       {/* <Footer /> */}
