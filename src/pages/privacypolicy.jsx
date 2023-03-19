@@ -1,6 +1,6 @@
 import '../styles/space.css'
 
-function Contact() {
+function Policy() {
     return (
         <body className='gap'>
         <h1>Privacy Policy of ( ˘ ³˘) ♥ </h1>
@@ -66,4 +66,4 @@ function Contact() {
     ) 
 }
 
-export default Contact
+export default Policy
