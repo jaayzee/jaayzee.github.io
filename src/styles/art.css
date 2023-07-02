@@ -1,9 +1,21 @@
+.title {
+  text-align: center;
+  color: var(--bg-nav);
+}
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 15px;
     padding-left: 6rem;
+    padding-bottom: 15rem;
+    align-items: center;
+    justify-items: center;
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding-left:1rem;
+    }
   }
   
   .container img {
@@ -38,6 +50,7 @@
     z-index: 1;
     position: absolute;
     max-height: 0rem;
+    margin-top: 1rem;
     padding: 1rem;
     border:0.1rem;
     border-style: solid;
@@ -56,6 +69,6 @@
   }
   
   .date {
-    color: var(--text)
+    color: var(--gray3)
   }
 

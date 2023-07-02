@@ -16,7 +16,7 @@
     font-size: 10vh;
     font-weight: bold;
     white-space: nowrap;
-}
+    }
 }
 .header {
     height: 100vh;
@@ -33,8 +33,9 @@
 @media only screen and (max-width: 600px) {
     .top-block {
         position: relative;
-        font-size: 3vw;
+        font-size: 4vw;
         padding: 1em;
+        text-align: center;
     }
     .me-link-big {
         display: inline-block;

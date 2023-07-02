@@ -26,7 +26,13 @@ const Feed = (props) => {
                         type="video/mp4" 
                         controls playsinline>
                     </video>
-                    <div className='captions'> {timestamp} {caption} {username} </div>
+                    <div className='captions'> 
+                        <span className='user'> {username} </span> <br /> <br />
+                        <span className='date'> {dateConv} </span> <br />
+                        {first}
+                        <span className='text'> {leftovers} </span> 
+                        
+                    </div>
                 </div>
             )
             break;
@@ -40,7 +46,13 @@ const Feed = (props) => {
                         src={media_url} 
                         alt={caption} 
                     />
-                    <div className='captions'> {timestamp} {caption} {username} </div>
+                    <div className='captions'> 
+                        <span className='user'> {username} </span> <br /> <br />
+                        <span className='date'> {dateConv} </span> <br />
+                        {first}
+                        <span className='text'> {leftovers} </span> 
+                        
+                    </div>
                 </div>
             );
             break;
@@ -55,7 +67,7 @@ const Feed = (props) => {
                         alt={caption} 
                     />
                     <div className='captions'> 
-                        <span className='user'> {username} </span> <br />
+                        <span className='user'> {username} </span> <br /> <br />
                         <span className='date'> {dateConv} </span> <br />
                         {first}
                         <span className='text'> {leftovers} </span> 
