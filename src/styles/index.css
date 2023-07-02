@@ -334,6 +334,9 @@
         transform: scale(1);
       }
     }
+    .out {
+      opacity: 0;
+    }
 
   }
   .fa-primary {

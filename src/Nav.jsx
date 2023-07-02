@@ -77,7 +77,8 @@ function Nav() {
                         <span className="link-text">a r t</span>
                     </Link>
                 </li>
-                <li className="nav-item">
+                {/* PERHAPS ONCE YOUR DONE U CAN DO LOVE DEATH AND ROBOTS FOR ART MUSIC AND GAMING */}
+                {/* <li className="nav-item">
                     <Link to="/car" className="nav-link">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -89,8 +90,8 @@ function Nav() {
                         </svg>
                         <span className="link-text">c a r</span>
                     </Link>
-                </li>
-                <li className="nav-item">
+                </li> */}
+                {/* <li className="nav-item">
                     <Link to="/sea" className="nav-link">
                         <svg 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -102,7 +103,7 @@ function Nav() {
                         </svg>
                         <span className="link-text">s e a</span>
                     </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                     <Link to="/space" className="nav-link">
                         <svg 

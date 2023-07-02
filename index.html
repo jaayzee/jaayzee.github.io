@@ -48,6 +48,8 @@
               }, 200)
             })
         })
+        document.addEventListener("mouseout", () => { cursor.classList.add("out"); })
+        document.addEventListener("mouseover", () => { cursor.classList.remove("out"); })
       </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
