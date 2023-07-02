@@ -28,6 +28,7 @@
     --bg-nav: var(--blue);
     --bg-nav-shadow: var(--blue-shadow);
     --text: var(--gray6);
+    --text-op: var(--gray0);
     --border-color: var(--blue);
   }
   .dark {
@@ -35,6 +36,7 @@
     --bg-nav: var(--purple);
     --bg-nav-shadow: var(--purple-shadow);
     --text: var(--gray0);
+    --text-op: var(--gray6);
     --border-color: var(--purple);
   }
 
@@ -313,6 +315,9 @@
       pointer-events: none;
       border-radius: 50%;
       background: var(--text);
+      border-style: solid;
+      border-width: 1px;
+      border-color: var(--text-op);
       position: absolute;
     }
     @keyframes cursorAnim {
