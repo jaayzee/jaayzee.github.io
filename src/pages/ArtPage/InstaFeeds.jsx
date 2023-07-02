@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
-
 import Feed from './Feed'
+import '../../styles/art.css'
 
-import './instaFeeds.css'
+// Base Code: https://github.com/MingSheng92/react_isntafeed
 
 const InstaFeeds = ({token, ...props}) => {
     const [feeds, setFeedsData] = useState([])
@@ -18,7 +18,7 @@ const InstaFeeds = ({token, ...props}) => {
         async function fetchInstagramPost () {
           try{
             axios
-                .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${tokenProp.current}`)
+                .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,timestamp,username&limit=${props.limit}&access_token=${tokenProp.current}`)
                 .then((resp) => {
                     setFeedsData(resp.data.data)
                 })

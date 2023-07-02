@@ -1,6 +1,8 @@
 import React from 'react'
 import InstaFeeds from './InstaFeeds'
 
+// Base Code: https://github.com/MingSheng92/react_isntafeed
+
 function Art() {
     return (
         <>
