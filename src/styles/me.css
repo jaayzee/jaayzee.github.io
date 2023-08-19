@@ -14,6 +14,7 @@
         width: 45vw;
         fill: var(--bg-nav);
         z-index: -1;
+        padding-left: 5rem;
     }
     .top-block {
         position: relative;
@@ -36,7 +37,6 @@
     .top-block {
         position: relative;
         font-size: 4vw;
-        padding: 1em;
         text-align: center;
     }
     .me-link-big {
@@ -53,6 +53,10 @@
         fill: var(--bg-nav);
         z-index: -1;
     }
+    .sponge {
+        height: 5rem;
+    }
+
 }
 
 .morning{

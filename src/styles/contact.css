@@ -5,15 +5,9 @@
         height: 100vh;
     }
 }
-.titleSpace {
+.titleContact {
     text-align: center;
     color: var(--bg-nav);
     font-size: 3rem;
     position: relative;
   }
-.subheader {
-    text-align: center;
-    color: var(--text);
-    font-size: 1rem;
-    position: relative;
-}

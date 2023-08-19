@@ -10,10 +10,10 @@ const DarkMode = () => {
     theme = localStorage.getItem("theme");
   }
 
-  if (theme === 'dark') {
+  if (theme === 'light') {
     body.classList.add(theme)
   } else {
-    body.classList.add('light')
+    body.classList.add('dark')
   }
 
   const switchTheme = (e) => {

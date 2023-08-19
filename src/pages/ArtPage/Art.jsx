@@ -7,7 +7,7 @@ import '../../styles/art.css'
 function Art() {
     return (
         <>
-            <header className="title">
+            <header className="titleArt">
                 <h1>A R T W O R K</h1>
             </header>
 

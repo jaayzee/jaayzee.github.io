@@ -61,6 +61,7 @@ function Intro() {
                 I <a className='title-small me-link' href="https://steamcommunity.com/id/belloga/" target="_blank">game</a> way too much
                 <br></br>
             </div>
+            <div className='sponge'></div>
             <div></div>
         </div>
     ) 
