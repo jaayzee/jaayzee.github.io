@@ -58,10 +58,9 @@ function Intro() {
                 <br></br>
                 I <a className='title-small me-link' href="https://www.instagram.com/jozhoooo/" target="_blank">draw</a> things I like <br></br>
                 I want to <a className='title-small me-link' href="https://github.com/jaayzee" target="_blank">develop</a> stuff  <br></br>
-                I <a className='title-small me-link' href="https://steamcommunity.com/id/belloga/" target="_blank">game</a> way too much
+                I <a className='title-small me-link' href="https://steamcommunity.com/id/beloooga/" target="_blank">game</a> way too much
                 <br></br>
             </div>
-            <div className='sponge'></div>
             <div></div>
         </div>
     ) 
