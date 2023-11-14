@@ -24,7 +24,7 @@
         align-items: center;
         justify-items: center;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         text-shadow: -1.5px 1.5px 0 var(--bg),
                       1.5px 1.5px 0 var(--bg),
                       1.5px -1.5px 0 var(--bg),
@@ -157,4 +157,15 @@
 }
 body {
     font-weight: bold;
+}
+.idle {
+    animation-name: idle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes idle {
+    0% { transform: scale(1, 1); }
+    50% { transform: scale(1.05, 1.05); }
+    0% { transform: scale(1, 1); }
 }

@@ -2,12 +2,36 @@
     .gap {
         padding-left: 6rem;
         /* padding: 1rem; */
-        height: 100vh;
+        
     }
+}
+.block {
+    padding-top: 40vh;
 }
 .titleContact {
     text-align: center;
     color: var(--bg-nav);
     font-size: 3rem;
     position: relative;
-  }
+}
+.contactText{
+    text-align: center;
+    position: relative;
+}
+.topContent{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1.5vh auto;
+    position: relative;
+    grid-gap: 2vw;
+}
+.bottomContent{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 3vw 3vw 3vw 3vw;
+    position: relative;
+    grid-gap: 2vw;
+}
+.logos{
+    fill: var(--bg-nav);
+}

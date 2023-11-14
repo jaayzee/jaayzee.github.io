@@ -7,7 +7,7 @@ const time = date.getHours()
 function Intro() {
     return (
         <div className='top-block'>
-            <svg viewBox="0 0 210 222" className='catlogo'>
+            <svg viewBox="0 0 210 222" className='idle catlogo'>
                 <path d="m 85.091154,212.96306 c -3.825446,-0.0698 -5.26776,-0.16708 -8.769573,-0.59138 -9.643453,-1.16847 -18.58806,-3.95146 -27.077508,-8.42482 -5.62927,-2.96624 -10.788367,-6.6285 
                     -15.744679,-11.1766 -1.298824,-1.19184 -4.872399,-4.90998 -6.071574,-6.31719 -6.136518,-7.20105 -11.078933,-15.79036 -14.369516,-24.97244 -2.962355,-8.26619 -4.6631185,-16.8333 
                     -5.2647745,-26.5198 -0.142622,-2.29618 -0.13944,-8.89185 0.0054,-11.25767 0.299637,-4.89323 0.883778,-9.95139 1.546286,-13.38949 0.106991,-0.55523 0.245876,-1.32035 0.308631,-1.70025 
@@ -54,9 +54,8 @@ function Intro() {
                     {time >= 12 ? time >= 16 ? <span className="evening"> Evening!</span>: <span className="afternoon"> Afternoon!</span>: <span className="morning"> Morning!</span>} My name is 
                 </div>
                 <a className="me-link-big" href="https://www.linkedin.com/in/jjzee" target="_blank"> JOHN ZHOU</a> <br></br>
-                I'm a SoCal-based perfectionist with a love of collaboration.  <br></br>
-                <br></br>
-                I <a className='title-small me-link' href="https://www.instagram.com/jozhoooo/" target="_blank">draw</a> things I like <br></br>
+                I'm a SoCal-based perfectionist with a love of collaboration.  <br></br> <br></br>
+                I <a className='title-small me-link' href="https://www.instagram.com/jozhoooo/" target="_blank">draw</a> things I like <br></br>     
                 I want to <a className='title-small me-link' href="https://github.com/jaayzee" target="_blank">develop</a> stuff  <br></br>
                 I <a className='title-small me-link' href="https://steamcommunity.com/id/beloooga/" target="_blank">game</a> way too much
                 <br></br>
