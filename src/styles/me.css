@@ -115,7 +115,7 @@
     width: 100%;
     transform: scaleX(0);
     height: 0.25em;
-    bottom: -0.25rem;
+    bottom: -0.5vh;
     left: 0;
     background-color: var(--bg-nav);
     transform-origin: bottom right;
