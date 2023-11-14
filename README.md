@@ -48,6 +48,10 @@ A quick lil
 ```sh
 npm install
 ```
+or a
+```sh
+vite install
+```
 should do the trick
 
 ## Test in Dev
