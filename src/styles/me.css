@@ -10,21 +10,23 @@
     white-space: nowrap;
     }
     .catlogo {
-        height: auto;
-        width: 45vw;
+        width: 155vh;
         fill: var(--bg-nav);
         z-index: -1;
-        padding-left: 5rem;
+    }
+    .catBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-25%, -30%);
+        padding: 10px;
     }
     .top-block {
-        position: relative;
+        position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        font-size: 2vh;
-        align-items: center;
-        justify-items: center;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        left: 50%;
+        transform: translate(-90%, -50%);
+        font-size: 1.5vw;
         text-shadow: -1.5px 1.5px 0 var(--bg),
                       1.5px 1.5px 0 var(--bg),
                       1.5px -1.5px 0 var(--bg),
@@ -35,9 +37,15 @@
 
 @media only screen and (max-width: 600px) {
     .top-block {
-        position: relative;
+        position: absolute;
         font-size: 4vw;
         text-align: center;
+        top: 10%;
+        text-shadow: -1.5px 1.5px 0 var(--bg),
+                      1.5px 1.5px 0 var(--bg),
+                      1.5px -1.5px 0 var(--bg),
+                      -1.5px -1.5px 0 var(--bg),
+                      1.5px -1.5px 0 var(--bg);
     }
     .me-link-big {
         display: inline-block;
@@ -48,10 +56,16 @@
         white-space: nowrap;
     }
     .catlogo {
-        height: 40vh;
-        width: auto;
+        width: 80vh;
         fill: var(--bg-nav);
         z-index: -1;
+    }
+    .catBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        padding: 10px;
     }
     .sponge {
         height: 5rem;
@@ -160,12 +174,12 @@ body {
 }
 .idle {
     animation-name: idle;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 @keyframes idle {
     0% { transform: scale(1, 1); }
     50% { transform: scale(1.05, 1.05); }
-    0% { transform: scale(1, 1); }
+    100% { transform: scale(1, 1); }
 }
