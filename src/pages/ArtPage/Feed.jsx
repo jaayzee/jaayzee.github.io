@@ -59,19 +59,23 @@ const Feed = (props) => {
         default:
             post = (
                 <div className='arts'>
-                    <img 
-                        width='100%'
-                        height='auto'
-                        id={id} 
-                        src={media_url} 
-                        alt={caption} 
-                    />
-                    <div className='captions'> 
-                        <span className='user'> {username} </span> <br /> <br />
-                        <span className='date'> {dateConv} </span> <br />
-                        {first}
-                        <span className='text'> {leftovers} </span> 
-                        
+                    <div className='artzoom'>
+                        <label>
+                            <input type="checkbox"></input>
+                            <img 
+                            // width='100%'
+                            // height='auto'
+                            id={id} 
+                            src={media_url} 
+                            alt={caption} 
+                            />
+                            <div className='captions'> 
+                                <span className='user'> {username} </span> <br /> <br />
+                                <span className='date'> {dateConv} </span> <br />
+                                {first}
+                                <span className='text'> {leftovers} </span> 
+                            </div>
+                        </label>
                     </div>
                 </div>
             );

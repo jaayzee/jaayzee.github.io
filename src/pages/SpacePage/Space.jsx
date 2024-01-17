@@ -8,6 +8,7 @@ function Space() {
         <div className='gap'>
             <div className='titleSpace'> TEMPORARY BIG CUBE </div>
                 <div className='subheader'>Pls rotate it while I figure out something to put here :/ </div>
+                <div className='subheader'>RUOXI SHRINE</div>
             <Canvas>
                 <OrbitControls enableZoom={false} autoRotate/>
                 <ambientLight intensity={1}/>

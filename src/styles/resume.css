@@ -1,0 +1,73 @@
+.doc {
+    padding-left: 6rem;
+    display: flex;
+    flex-wrap: no-wrap;
+    overflow: auto;
+    align-items: center;
+    justify-items: center;
+    height:100vh;
+    gap:3rem;
+}
+.doc h1{
+    padding-left: 0;
+    padding-right: 10vw;
+    font-size: 20vw;
+    flex: 0 0 auto;
+    width: auto;
+    animation: point 3s ease-in-out infinite;  
+}
+@keyframes point {
+    0%, 100%{
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(5%, 0);
+    }
+    85% {
+        transform: translate(0, 0);
+    }
+}
+@media screen and (min-width: 600px){
+    .doc h1{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 20vw;
+        flex: 0 0 auto;
+        width: auto;
+    }
+}
+
+.doc h2{
+    color: var(--text);
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-size: 10vh;
+    flex: 0 0 auto;
+    width: auto;
+    margin-right: -2rem;
+}
+
+.doc div{
+    flex: 0 0 auto;
+    width: auto;
+    color: var(--bg-nav);
+    line-height: 1.2em;
+}
+
+.doc a{
+    color: var(--text);
+}
+
+.doc a:hover{
+    color: var(--text-op);
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.sub {
+    color: var(--text);
+    font-size: 1.2rem;
+}

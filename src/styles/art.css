@@ -3,12 +3,12 @@
   color: var(--bg-nav);
 }
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: no-wrap;
+    overflow: auto;
     gap: 1rem;
     padding: 15px;
     padding-left: 6rem;
-    padding-bottom: 15rem;
     align-items: center;
     justify-items: center;
   }
@@ -17,40 +17,51 @@
       padding-left:1rem;
     }
   }
-  
-  .container img {
-    width: 100%;
-    height: auto;
+  .artzoom {
+    position: relative;
+  }
+  .artzoom img {
+    flex: 0 0 auto;
+    width: auto;
+    height: 75vh;
+    max-height: 100%;
+    margin-right: 10px;
     top: 0;
-    display: block;
-    transition: all 100ms ease-out;
+    transition: all 100ms ease-in-out;
     filter: grayscale(1);
     border-radius: 10px;
   }
-  
-  .container img:hover {
-    transform: scale(1.05);
-    filter: grayscale(0);
+  .artzoom input[type = checkbox] {
+    display:none;
   }
-
-  .container img:hover + .captions{
-    opacity: 1;
+  .artzoom input[type = checkbox]:checked ~ img + .captions{
+    opacity: 0.7;
     max-height: 200rem;
     display:block;
+  }
+  
+  .artzoom img:hover {
+    transform: scale(1.02);
+    filter: grayscale(0);
+    border-radius: 2em;
+  }
+
+  .artzoom img:hover + .captions{
+    transform: scale(1.02);
   }
 
 
   .arts {
     font-size: 1rem;
-    position: relative;
+    display: flex;
   }
   
   .captions {
     opacity: 0;
     z-index: 1;
     position: absolute;
+    bottom: 0;
     max-height: 0rem;
-    margin-top: 1rem;
     padding: 1rem;
     border:0.1rem;
     border-style: solid;
@@ -58,7 +69,7 @@
     border-radius: 10px;
     overflow: hidden;
     background: var(--bg);
-    transition: max-height 1s ease-in;
+    transition: all 100ms ease-in-out;
   }
 
   .user {
@@ -73,3 +84,16 @@
     color: var(--gray3)
   }
 
+  .artlogo {
+    /* fill: var(--bg-nav); */
+    height: 1em;
+    vertical-align: top;
+    margin-top: 4px;
+    fill: url(#start);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .titleArt:hover .artlogo {
+    fill: url(#end);
+    transform: scale(1.2);
+  }
