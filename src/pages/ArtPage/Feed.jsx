@@ -1,21 +1,26 @@
 import React from 'react'
 import '../../styles/art.css'
 
-
-// Base Code: https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4
 function FadeInSection(props) {
-    const [isVisible, setVisible] = React.useState(true);
+    const [isVisible, setVisible] = React.useState(false);
     const domRef = React.useRef();
+  
     React.useEffect(() => {
       const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
+        entries.forEach(entry => {
+          console.log(`entry`, entry, `is = ${entry.isIntersecting}`);
+          setVisible(entry.isIntersecting);
+        });
       });
-      observer.observe(domRef.current);
-      return () => observer.unobserve(domRef.current);
+  
+      const { current } = domRef;
+      observer.observe(current);
+  
+      return () => observer.unobserve(current);
     }, []);
     return (
       <div
-        className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
         ref={domRef}
       >
         {props.children}
@@ -102,11 +107,11 @@ const Feed = (props) => {
     }       
 
     return (
-        <FadeInSection>
-            <React.Fragment>
-                {post}
-            </React.Fragment>
-        </FadeInSection>
+        <React.Fragment>
+            <FadeInSection>
+            {post}
+            </FadeInSection>
+        </React.Fragment>
     );
 }
 

@@ -24,9 +24,7 @@
   .artzoom img {
     flex: 0 0 auto;
     width: auto;
-    height: 75vh;
-    max-height: 100%;
-    margin-right: 10px;
+    height: 80vh;
     top: 0;
     transition: all 100ms ease-in-out;
     filter: grayscale(1);
@@ -70,7 +68,7 @@
     border-radius: 10px;
     overflow: hidden;
     background: var(--bg);
-    transition: all 100ms ease-in-out;
+    transition: 500ms ease-in-out;
   }
 
   .user {
