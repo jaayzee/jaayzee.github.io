@@ -47,9 +47,9 @@
 }
 @media screen and (min-width: 600px){
     .doc h1{
-        padding-left: 5%;
-        padding-right: 10vw;
-        font-size: 20vw;
+        padding-left: 20%;
+        padding-right: 50%;
+        font-size: 10vw;
         flex: 0 0 auto;
         width: auto;
     }
