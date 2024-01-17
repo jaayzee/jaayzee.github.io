@@ -5,7 +5,8 @@
 .container {
     display: flex;
     flex-wrap: no-wrap;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: 1rem;
     padding: 15px;
     padding-left: 6rem;
@@ -96,4 +97,17 @@
   .titleArt:hover .artlogo {
     fill: url(#end);
     transform: scale(1.2);
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translatey(20vh);
+    visibility: hidden;
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    will-change: opacity, visibility;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
   }

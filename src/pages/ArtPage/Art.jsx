@@ -36,7 +36,6 @@ function Art() {
                         </a>
                 </h1>
             </header>
-
             <InstaFeeds token={import.meta.env.VITE_INS_TOKEN} limit={12}/>
         </>
     ) 

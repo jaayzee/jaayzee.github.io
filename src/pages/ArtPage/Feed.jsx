@@ -1,8 +1,28 @@
 import React from 'react'
 import '../../styles/art.css'
 
-// Base Code: https://github.com/MingSheng92/react_isntafeed
 
+// Base Code: https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4
+function FadeInSection(props) {
+    const [isVisible, setVisible] = React.useState(true);
+    const domRef = React.useRef();
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+      return () => observer.unobserve(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+        ref={domRef}
+      >
+        {props.children}
+      </div>
+    );
+  }
+// Base Code: https://github.com/MingSheng92/react_isntafeed
 const Feed = (props) => {
     const { id, caption, media_type, media_url, timestamp, username} = props.feed
     let post;
@@ -82,9 +102,11 @@ const Feed = (props) => {
     }       
 
     return (
-        <React.Fragment>
-            {post}
-        </React.Fragment>
+        <FadeInSection>
+            <React.Fragment>
+                {post}
+            </React.Fragment>
+        </FadeInSection>
     );
 }
 
