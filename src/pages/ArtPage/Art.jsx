@@ -8,8 +8,8 @@ function Art() {
     return (
         <>
             <header className="titleArt">
-                <h1>A R T W O R K &nbsp;
-                    <a href="https://www.instagram.com/jozhoooo/" target="_blank">
+                <h1>A R T W O R K</h1>
+                <a href="https://www.instagram.com/jozhoooo/" target="_blank">
                         <svg viewBox="0 0 448 512" className='artlogo'>
                                 <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 
                                 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 
@@ -34,7 +34,6 @@ function Art() {
                             </radialGradient>
                         </svg>
                         </a>
-                </h1>
             </header>
             <InstaFeeds token={import.meta.env.VITE_INS_TOKEN} limit={12}/>
         </>

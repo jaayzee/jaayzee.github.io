@@ -1,6 +1,9 @@
 import React from 'react'
 import '../../styles/art.css'
 
+// Base Code:https://dev.to/selbekk/how-to-fade-in-content-as-it-scrolls-into-view-10j4
+// NOTE: the code within the source is prone to memory leaks
+// one of the commenters has a solution fix for it implemented here
 function FadeInSection(props) {
     const [isVisible, setVisible] = React.useState(false);
     const domRef = React.useRef();
@@ -98,7 +101,7 @@ const Feed = (props) => {
                                 <span className='user'> {username} </span> <br /> <br />
                                 <span className='date'> {dateConv} </span> <br />
                                 {first}
-                                <span className='text'> {leftovers} </span> 
+                                {/* <span className='text'> {leftovers} </span>  */}
                             </div>
                         </label>
                     </div>

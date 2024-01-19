@@ -1,15 +1,33 @@
 .titleArt {
-  text-align: center;
   color: var(--bg-nav);
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
+
+.artlogo {
+  /* fill: var(--bg-nav); */
+  width: 5vh;
+  margin-top: 4px;
+  fill: url(#start);
+  transition: transform 0.1s ease-in-out;
+}
+
+.titleArt:hover .artlogo {
+  fill: url(#end);
+  transform: scale(1.2);
+}
+
 .container {
     display: flex;
     flex-wrap: no-wrap;
     overflow-x: auto;
     overflow-y: hidden;
     gap: 1rem;
-    padding: 15px;
     padding-left: 6rem;
+    padding-right: 1rem;
     align-items: center;
     justify-items: center;
   }
@@ -17,36 +35,60 @@
     .container {
       padding-left:1rem;
     }
+    .titleArt{
+      margin-top: 5vh;
+    }
+    .artzoom img {
+      width: 90vw;
+      height: auto;
+      top: 0;
+      transition: all 100ms ease-in-out;
+      border-radius: 10px;
+    }
+    .captions {
+      width: 89%
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .artzoom img {
+      flex: 0 0 auto;
+      width: auto;
+      height: 80vh;
+      top: 0;
+      transition: all 100ms ease-in-out;
+      filter: grayscale(1);
+      border-radius: 1em;
+    }
+    .titleArt{
+      padding-left: 6rem;
+    }
+    .captions {
+      width: auto; 
+      border-radius: 0;
+      flex: 0 0 auto;
+      transform: translate(1em, -1em);
+    }
   }
   .artzoom {
     position: relative;
-  }
-  .artzoom img {
-    flex: 0 0 auto;
-    width: auto;
-    height: 80vh;
-    top: 0;
-    transition: all 100ms ease-in-out;
-    filter: grayscale(1);
-    border-radius: 10px;
   }
   .artzoom input[type = checkbox] {
     display:none;
   }
   .artzoom input[type = checkbox]:checked ~ img + .captions{
     opacity: 0.7;
-    max-height: 200rem;
+    height: 5rem;
     display:block;
   }
   
   .artzoom img:hover {
     transform: scale(1.02);
     filter: grayscale(0);
-    border-radius: 2em;
+    border-radius: 0;
   }
 
   .artzoom img:hover + .captions{
-    transform: scale(1.02);
+    border-radius: 0em;
   }
 
 
@@ -60,15 +102,14 @@
     z-index: 1;
     position: absolute;
     bottom: 0;
-    max-height: 0rem;
+    height: 0rem;
     padding: 1rem;
-    border:0.1rem;
     border-style: solid;
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 1em;
     overflow: hidden;
     background: var(--bg);
-    transition: 500ms ease-in-out;
+    transition: all 100ms ease-in-out;
   }
 
   .user {
@@ -81,20 +122,6 @@
   
   .date {
     color: var(--gray3)
-  }
-
-  .artlogo {
-    /* fill: var(--bg-nav); */
-    height: 1em;
-    vertical-align: top;
-    margin-top: 4px;
-    fill: url(#start);
-    transition: transform 0.1s ease-in-out;
-  }
-
-  .titleArt:hover .artlogo {
-    fill: url(#end);
-    transform: scale(1.2);
   }
 
   .fade-in-section {
