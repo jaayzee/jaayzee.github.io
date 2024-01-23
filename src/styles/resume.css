@@ -1,16 +1,15 @@
 .doc {
-    padding-left: 15vw;
-    padding-top: 4vh;
     display: flex;
     flex-wrap: no-wrap;
     overflow: auto;
+    overflow-y: hidden;
     align-items: center;
     justify-items: center;
     gap:3rem;
+    height: 100vh;
 }
+
 .doc h1{
-    padding-left: 0;
-    padding-right: 10vw;
     font-size: 20vw;
     flex: 0 0 auto;
     width: auto;
@@ -46,12 +45,26 @@
 
 }
 @media screen and (min-width: 600px){
+    .parent {
+        max-width: 0;
+        max-height: 0;
+    }
+    .livery {
+        z-index: -1;
+        border: 100vh solid var(--bg-nav);
+        transform: skewX(50deg) scaleY(cos(45deg)) translate(30vw,-150vh);
+    }
     .doc h1{
-        padding-left: 20%;
+        padding-left: 30%;
         padding-right: 50%;
         font-size: 10vw;
         flex: 0 0 auto;
         width: auto;
+        text-shadow: -2px 2px 0 var(--bg),
+                      2px 2px 0 var(--bg),
+                      2px -2px 0 var(--bg),
+                      -2px -2px 0 var(--bg),
+                      2px -2px 0 var(--bg);
     }
     .doc h2{
         color: var(--text);
@@ -65,18 +78,18 @@
 }
 
 
-.doc div{
+.doc div {
     flex: 0 0 auto;
     width: auto;
     color: var(--bg-nav);
     line-height: 1.2em;
 }
 
-.doc a{
+.doc a {
     color: var(--text);
 }
 
-.doc a:hover{
+.doc a:hover {
     color: var(--text-op);
 }
 
@@ -88,4 +101,14 @@
 .sub {
     color: var(--text);
     font-size: 1.2rem;
+}
+
+.drivelogo {
+    width: 10vh;
+    margin: 5rem;
+    transition: all 0.1s ease-in-out;
+}
+
+.drivelogo:hover {
+    transform: scale(2) rotate(360deg);
 }
