@@ -28,8 +28,8 @@
 @font-face {
   font-family: 'Kotori';
   src: local('Kotori'), url(../assets/fonts/kotori.otf) format('opentype');
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
+  /* other formats include: 'woff2', 'truetype, 'opentype', 'embedded-opentype', and 'svg' */
+  /* https://befonts.com/kotori-rose-typeface.html */
 }
 
  
