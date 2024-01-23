@@ -6,7 +6,6 @@
     align-items: center;
     justify-items: center;
     gap:3rem;
-    height: 100vh;
 }
 
 .doc h1{
@@ -29,6 +28,7 @@
 @media screen and (max-width: 600px){
     .doc{
         padding-bottom: 6rem;
+        padding-top: 4vh;
     }
     .doc div {
         font-size: 2vh;
@@ -53,6 +53,9 @@
         z-index: -1;
         border: 100vh solid var(--bg-nav);
         transform: skewX(50deg) scaleY(cos(45deg)) translate(30vw,-150vh);
+    }
+    .doc {
+        height: 100vh;
     }
     .doc h1{
         padding-left: 30%;
