@@ -16,15 +16,24 @@ const InstaFeeds = ({token, ...props}) => {
         const abortController = new AbortController();
 
         async function fetchInstagramPost () {
-          try{
-            axios
-                .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,timestamp,username&limit=${props.limit}&access_token=${tokenProp.current}`)
-                .then((resp) => {
-                    setFeedsData(resp.data.data)
-                })
-          } catch (err) {
-              console.log('error', err)
-          }
+            try{
+                axios
+                    .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,timestamp,username&limit=${props.limit}&access_token=${tokenProp.current}`)
+                    .then((resp) => {
+                        setFeedsData(resp.data.data)
+                    })
+            } catch (err) {
+                console.log('error', err)
+            }  
+            try{
+                axios
+                    .get(`https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${tokenProp.current}`)
+                    .then(() => {
+                        console.log("Long-lived token refreshed! 30 Days Time")
+                    })
+            } catch (err) {
+                console.log('Long-lived token refresh error, check token validity', err)
+            }
         }
         
         // manually call the fetch function 
