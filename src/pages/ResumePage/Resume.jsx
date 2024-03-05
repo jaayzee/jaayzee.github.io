@@ -1,12 +1,26 @@
 import '../../styles/resume.css'
+import React, { useRef } from 'react';
+
 
 function Resume() {
+
+    const containerRef = useRef(null);
+
+    const handleScroll = (event) => {
+        const container = containerRef.current
+        if (container) {
+            container.scrollLeft += event.deltaY
+            console.log()
+            // event.preventDefault()
+        }
+    }
+
     return (
         <>
-        <div className='doc'>
+        <div className='doc' onWheel={handleScroll} ref={containerRef}>
             <div className='parent'>
                 <div className='livery'></div>
-                </div>
+            </div>
             <h1>
                 J O H N<br></br>Z H O U
             </h1>

@@ -6,6 +6,17 @@ import '../../styles/art.css'
 // Base Code: https://github.com/MingSheng92/react_isntafeed
 
 const InstaFeeds = ({token, ...props}) => {
+
+    const containerRef = useRef(null);
+
+    const handleScroll = (event) => {
+        const container = containerRef.current
+        if (container) {
+            container.scrollLeft += event.deltaY
+            // event.preventDefault()
+        }
+    }
+
     const [feeds, setFeedsData] = useState([])
     //use useRef to store the latest value of the prop without firing the effect
     const tokenProp = useRef(token);
@@ -46,7 +57,7 @@ const InstaFeeds = ({token, ...props}) => {
     }, [props.limit])
 
     return (
-        <div className="container">
+        <div className="container" onWheel={handleScroll} ref={containerRef}>
             {feeds.map((feed) => (
                 <Feed key={feed.id} feed={feed} />
             ))}
