@@ -64,7 +64,7 @@ function Intro() {
                 </Link>
                 &nbsp;things I like <br></br>     
                 I want to <a className='title-small me-link' href="https://github.com/jaayzee" target="_blank">develop</a> stuff  <br></br>
-                I <a className='title-small me-link' href="https://steamcommunity.com/id/beloooga/" target="_blank">game</a> way too much
+                I like to play <a className='title-small me-link' href="https://steamcommunity.com/id/beloooga/" target="_blank">games</a>
                 <br></br>
             </div>
             <div></div>
